@@ -1,0 +1,23 @@
+﻿@using PriceLists.Services;
+@model CreateProductViewModel
+
+
+<form asp-action="Add" asp-controller="Product">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input hidden asp-for="PriceListId" value="@Model.PriceListId" />
+    @if(Model.Columns !=null && Model.Columns.Count() >0){
+        @foreach ( Column column in Model.Columns){
+        <div class="form-group">
+            <label  class="control-label">@column.Name</label>
+            <input  asp-for="Values" value="" class="form-control" />
+        </div>
+            <div class="form-group">
+                <label class="control-label">@column.Name</label>
+                <input type="hidden" asp-for="Columns" value="" class="form-control" />
+            </div>
+        }
+    }
+    <div class="form-group">
+        <input type="submit" value="Добавить" class="btn btn-outline-secondary" />
+    </div>
+</form>

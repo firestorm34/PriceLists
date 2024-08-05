@@ -1,0 +1,265 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\.NET\\PriceLists\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\extentions\\columntypeconvert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\extentions\\columntypeconvert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\services\\columnservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\services\\columnservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\models\\productcolumnvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\models\\productcolumnvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\data\\repositories\\productcolumnvaluerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\data\\repositories\\productcolumnvaluerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\views\\product\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\services\\editproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\services\\editproductviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\pricelisthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\pricelisthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\controllers\\pricelistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\controllers\\pricelistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\models\\column.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\models\\column.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\services\\pricelistservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\services\\pricelistservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|c:\\.net\\pricelists\\pricelists\\views\\pricelist\\get.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{411D8FFC-98D2-4DAE-8BC6-CC532677BF4B}|PriceLists\\PriceLists.csproj|solutionrelative:pricelists\\views\\pricelist\\get.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "PriceLists\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAADIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T13:26:10.545Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditProductViewModel.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Services\\EditProductViewModel.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Services\\EditProductViewModel.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Services\\EditProductViewModel.cs",
+              "RelativeToolTip": "PriceLists\\Services\\EditProductViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T14:32:03.616Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Views\\Product\\Add.cshtml",
+              "RelativeDocumentMoniker": "PriceLists\\Views\\Product\\Add.cshtml",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Views\\Product\\Add.cshtml",
+              "RelativeToolTip": "PriceLists\\Views\\Product\\Add.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T13:27:15.295Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PriceListController.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Controllers\\PriceListController.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Controllers\\PriceListController.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Controllers\\PriceListController.cs",
+              "RelativeToolTip": "PriceLists\\Controllers\\PriceListController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAxwEcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T14:45:45.889Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ColumnTypeConvert.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Extentions\\ColumnTypeConvert.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Extentions\\ColumnTypeConvert.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Extentions\\ColumnTypeConvert.cs",
+              "RelativeToolTip": "PriceLists\\Extentions\\ColumnTypeConvert.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T13:14:54.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductColumnValue.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Models\\ProductColumnValue.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Models\\ProductColumnValue.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Models\\ProductColumnValue.cs",
+              "RelativeToolTip": "PriceLists\\Models\\ProductColumnValue.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAUwC8AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T12:48:52.518Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ColumnServices.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Services\\ColumnServices.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Services\\ColumnServices.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Services\\ColumnServices.cs",
+              "RelativeToolTip": "PriceLists\\Services\\ColumnServices.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwBsAAABlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T12:41:26.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Data\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Data\\ApplicationContext.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Data\\ApplicationContext.cs",
+              "RelativeToolTip": "PriceLists\\Data\\ApplicationContext.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T11:36:54.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductColumnValueRepository.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Data\\Repositories\\ProductColumnValueRepository.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Data\\Repositories\\ProductColumnValueRepository.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Data\\Repositories\\ProductColumnValueRepository.cs",
+              "RelativeToolTip": "PriceLists\\Data\\Repositories\\ProductColumnValueRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T11:33:08.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PriceListHub.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\PriceListHub.cs",
+              "RelativeDocumentMoniker": "PriceLists\\PriceListHub.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\PriceListHub.cs",
+              "RelativeToolTip": "PriceLists\\PriceListHub.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAlwB8AAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-03T11:34:35.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductServices.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Services\\ProductServices.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Services\\ProductServices.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Services\\ProductServices.cs",
+              "RelativeToolTip": "PriceLists\\Services\\ProductServices.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAhwCAAAABnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T13:54:32.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Column.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Models\\Column.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Models\\Column.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Models\\Column.cs",
+              "RelativeToolTip": "PriceLists\\Models\\Column.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAkwBkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T12:12:49.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Get.cshtml",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Views\\PriceList\\Get.cshtml",
+              "RelativeDocumentMoniker": "PriceLists\\Views\\PriceList\\Get.cshtml",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Views\\PriceList\\Get.cshtml",
+              "RelativeToolTip": "PriceLists\\Views\\PriceList\\Get.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAABlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-10T13:37:33.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PriceListServices.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Services\\PriceListServices.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Services\\PriceListServices.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Services\\PriceListServices.cs",
+              "RelativeToolTip": "PriceLists\\Services\\PriceListServices.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAhwCAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T13:30:53.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\.NET\\PriceLists\\PriceLists\\Program.cs",
+              "RelativeDocumentMoniker": "PriceLists\\Program.cs",
+              "ToolTip": "C:\\.NET\\PriceLists\\PriceLists\\Program.cs",
+              "RelativeToolTip": "PriceLists\\Program.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAgwBUAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T13:27:42.896Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

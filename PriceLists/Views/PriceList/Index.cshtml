@@ -1,0 +1,40 @@
+﻿<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+<script type="text/javascript" src="~/js/PriceListIndex.js" asp-append-version="true"> </script>
+@*<script src="~/js/signalr.js" asp-append-version="true"> </script>
+<script src="~/js/signalr.min.js" asp-append-version="true"> </script>*@
+
+
+<div class="text-center">
+    <h2 id="pricelisthead">PriceLists:</h2>
+    <div style="margin: 20px 15px">
+        <a class="btn btn-success" asp-action="Add" > Add Pricelist</a>
+    </div>
+        <table id="table" class="fl-table " 
+                style="border: 1px solid gray; 
+    border-radius:14px;">
+        <thead><th>Id</th> <th>Name</th> <th>Actions</th></thead>
+        <tbody id="table-body"></tbody>
+
+             
+            
+
+        </table>
+        <div id="pageBtnBlock" style="position:relative; height:3vw;">
+
+                        <div style="position: absolute;left: 0; margin-left:3vw;" id="prevPageBtn">
+                            <a class="btn" onclick="onPrevPageClick()"> <<< Previous
+                            </a>
+                        </div>
+
+                        <div style="position: absolute;right: 0;margin-right: 3vw;" id="nextPageBtn">
+                            <a class="btn" onclick="onNextPageClick()"> Next >>>
+                            </a>
+                        </div>
+
+        </div>
+</div>
+<style>
+    .btn{
+        font-size:14px !important;
+    }
+</style>

@@ -1,0 +1,43 @@
+﻿@model PageResult<WeatherInfo>
+<div class="text-center">
+    
+        @if(Model !=null && Model.Values != null){
+            <table  class="table " 
+            style="border: 1px solid gray; 
+border-radius:14px;">
+            @foreach (var value in Model.Values)
+            {
+            
+                <tr class="d-md-table-row">
+                <td class="d-md-table-cell"> @value.Date</td>
+                    <td class ="d-md-table-cell"> @value.Time</td>
+                    <td class="d-md-table-cell"> @value.Temperature</td>
+                    <td class="d-md-table-cell" > @value.WindSpeed</td>
+
+                </tr>
+            }
+            <tr style="position:relative; height:3vw;"> 
+                <td> 
+                        @if(Model.PageNumber >1)
+                        {
+                        <a style="position: absolute;left: 0; margin-left:3vw;"
+                            asp-route-pageNumber="@(Model.PageNumber-1)" class="btn-light">
+                            @(Model.PageNumber-1)
+                        </a>
+                        }
+                        @if(Model.PageNumber < Model.TotalNumberOfPages)
+                        {
+                        <a style="position: absolute;right: 0;margin-right: 3vw;"
+                        asp-route-pageNumber="@(Model.PageNumber+1)" class="btn-light">
+                            @(Model.PageNumber + 1) 
+                        </a>
+                        }
+                    </td>
+            </tr>
+        </table>
+        }
+        else{
+            <div>Error! Didn't load'</div>
+        }
+    
+</div>

@@ -1,0 +1,78 @@
+﻿@using PriceLists.Services;
+@model CreatePriceListViewModel
+
+<form asp-action="Add" asp-controller="PriceList">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div></div>
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <div  style="margin-bottom: 15px"> Columns: </div>
+    <a style="margin-bottom: 15px; margin-left:10px;" class="btn btn-primary" onclick="onAddBtnClick()">
+        Add Column
+    </a>
+
+    <div id="columns-block" style="margin-bottom: 15px; padding-left:20px;">
+
+        <div class="row columns-row">
+            <div class="form-group">
+                <div> Column's Name </div>
+                <input type="text" asp-for="ColumnNames" value=""></input>
+            </div>
+
+            <div class="form-group" >
+                <div> Column's DataType </div>
+                <select style="max-width:300px !important" class="form-select" asp-items="Html.GetEnumSelectList<ColumnDataType>()" asp-for="ColumnTypes">
+                 
+                </select>
+            </div>
+
+           
+        </div>
+    </div>
+
+
+
+    
+
+    <div class="form-group">
+        <input type="submit" value="Add Pricelist" class="btn btn-outline-secondary" />
+    </div>
+
+ 
+
+</form>
+
+<style>
+    form > *{
+        margin-bottom: 10px;
+    }
+    .columns-row{
+        padding: 15px 12px !important;
+        border: 1px grey solid;
+        border-radius: 15px;
+        max-width: 450px !important;
+    }
+
+        .columns-row >  * {
+            margin-bottom: 15px;
+        }
+
+    .columns-row > div > * {
+        margin-bottom: 6px;
+    }
+</style>
+<script>
+    function onAddBtnClick() {
+        let formGroup = document.getElementById("columns-block").firstElementChild.innerHTML;
+        let columnsBlock = document.getElementById("columns-block");
+        let formGroupElem = document.createElement("div");
+        formGroupElem.className = "row columns-row";
+        formGroupElem.style["margin-top"] = "12px";
+        formGroupElem.innerHTML = formGroup;
+        columnsBlock.appendChild(formGroupElem);
+    }
+
+
+</script>

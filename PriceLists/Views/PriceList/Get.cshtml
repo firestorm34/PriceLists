@@ -1,0 +1,61 @@
+﻿@model PriceListViewModel
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+<script type="text/javascript" src="~/js/PriceListGet.js" asp-append-version="true"> </script>
+<div class="text-center">
+   
+    @if (Model != null && Model.Columns !=null)
+    {
+         <h2 >@(Model.Name + " PriceList")</h2>
+
+      <div style="margin: 20px 15px">
+                        <a asp-action="Add" asp-controller="Product" asp-route-priceListId="@Model.Id" class="btn btn-success"> Add Product</a>
+        </div>
+        <table id="table" class="fl-table"
+           style="border: 1px solid gray;
+    border-radius:14px;">
+            <thead >
+                @foreach (var col in Model.Columns)
+                {
+
+                        <th > @col.Name (@col.Type.ToString())</th>
+
+                }
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+   
+        </table>
+              
+                  
+                 
+                    <div id="pageBtnBlock" style="position:relative; height:3vw;">
+
+                        <div style="position: absolute;left: 0; margin-left:3vw;" id="prevPageBtn">
+                            <a class="btn" onclick="onPrevPageClick()">
+                               Previous
+                            </a>
+                        </div>
+
+                        <div style="position: absolute;right: 0;margin-right: 3vw;" id="nextPageBtn">
+                            <a class="btn" onclick="onNextPageClick()">
+                                Next >>>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+    }
+    else
+    {
+        <div>Error! Didn't load'</div>
+    }
+   
+</div>
+<style>
+    .fl-table td{
+        width:100px;
+    }
+</style>
+
