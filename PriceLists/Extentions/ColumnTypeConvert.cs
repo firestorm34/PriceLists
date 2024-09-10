@@ -9,37 +9,69 @@ namespace PriceLists.Extentions
 
         static public ConversionResult TryConvertFromStringToInt(string value)
         {
-            int result = Convert.ToInt32(value);
-            if (result != 0)
+            try
             {
+                int result = Convert.ToInt32(value);
 
+                if (result != 0)
+                {
+
+                    return new ConversionResult(value);
+
+                }
                 return new ConversionResult(false);
-
             }
 
-            return new ConversionResult(false);
+            catch (Exception e)
+            {
+
+               return MapExceptionConversionResult(e);
+            }
         }
 
         static public ConversionResult TryConvertFromStringToDateTime(string value)
         {
-            DateTime result = Convert.ToDateTime(value);
-            if (result != DateTime.MinValue)
+            try
             {
+                DateTime result = Convert.ToDateTime(value);
 
+                if (result != DateTime.MinValue)
+                {
+
+                    return new ConversionResult(value);
+
+                }
                 return new ConversionResult(false);
-
             }
 
-            return new ConversionResult(false);
+            catch (Exception e)
+            {
+
+                return MapExceptionConversionResult(e);
+            }
         }
 
-        public static double TryConvertFromStringToFloat(string value)
+        public static ConversionResult TryConvertFromStringToFloat(string value)
         {
+            try
+            {
+                double result = Convert.ToDouble(value);
 
-        double result = Convert.ToDouble(value);
+                if (result != 0.0)
+                {
 
-            return result;
-                
+                    return new ConversionResult(value);
+
+                }
+                return new ConversionResult(false);
+            }
+
+            catch (Exception e)
+            {
+
+                return MapExceptionConversionResult(e);
+            }
+
 
 
         }
@@ -59,5 +91,19 @@ namespace PriceLists.Extentions
             [ColumnDataType.Date] = TryConvertFromStringToDateTime,
             [ColumnDataType.String] = (string value) => new ConversionResult (value)
         };
+
+        static ConversionResult MapExceptionConversionResult(Exception exception)
+        {
+            switch (exception)
+            {
+                case OverflowException:
+                    return new ConversionResult(false, ConversionFailReason.Overflow);
+                case FormatException:
+                    return new ConversionResult(false, ConversionFailReason.IncorrectFormat);
+                default:
+                    return new ConversionResult(false);
+            }
+        }
+
     }
 }

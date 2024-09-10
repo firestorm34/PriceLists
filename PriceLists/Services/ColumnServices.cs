@@ -4,7 +4,7 @@ using PriceLists.Models.ViewModels;
 using PriceLists.Models;
 using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 
 namespace PriceLists.Services
 {
@@ -23,37 +23,56 @@ namespace PriceLists.Services
         }
 
 
-        public async Task<CreationResult> TryAddColumnValueAsync(Column column, string inputValue, int productId)
+        public Column? Add(Column column)
         {
-            Func<string, ConversionResult> conversionMethod = ColumnTypeConvert.ColumnTypeConversions[column.Type];
-            conversionMethod(inputValue);
+             Column columnEntity = unitOfWork.ColumnRepository.Add(column);
+            unitOfWork.Save();
+            return columnEntity;
+
+        }
+
+        public ProductColumnValue? TryAddColumnValue(Column column, object? inputValue, int productId)
+        {
+
+            switch (column.Type)
+            {
+                case ColumnDataType.Number: 
+                    return  AddNumberColumn(column.Id, productId, Convert.ToInt32(inputValue));
+                case ColumnDataType.Date:
+                    return  AddDateColumn(column.Id, productId, Convert.ToDateTime( inputValue));
+                case ColumnDataType.Float:
+                    return AddFloatColumn(column.Id, productId, Convert.ToDouble(inputValue));
+                case ColumnDataType.String:
+                    return  AddStringColumn(column.Id, productId, (string)inputValue);
+                default: return null;
+            }
         }
 
        
 
-        public  async Task<ProductColumnValue?> AddStringColumnAsync (int columnId, int productId, string value) {
-            return await unitOfWork.ProductColumnValueRepository.AddAsync(
+        public  ProductColumnValue? AddStringColumn (int columnId, int productId, string value) {
+            return  unitOfWork.ProductColumnValueRepository.Add(
                 new StringProductColumnValue { ColumnId = columnId, ProductId = productId, StringValue = value });
         }
 
 
-        public async Task<ProductColumnValue?> AddDateColumnAsync(int columnId, int productId, DateTime value)
+        public  ProductColumnValue? AddDateColumn(int columnId, int productId, DateTime value)
         {
-            return await unitOfWork.ProductColumnValueRepository.AddAsync(
+            return  unitOfWork.ProductColumnValueRepository.Add(
                 new DateProductColumnValue { ColumnId = columnId, ProductId = productId, DateValue = value });
         }
 
 
-        public async Task<ProductColumnValue?> AddNumberColumnAsync(int columnId, int productId, int value)
+        public ProductColumnValue? AddNumberColumn(int columnId, int productId, int value)
         {
-            return await unitOfWork.ProductColumnValueRepository.AddAsync(
+            return  unitOfWork.ProductColumnValueRepository.Add(
                 new NumberProductColumnValue { ColumnId = columnId, ProductId = productId, NumberValue = value });
         }
 
 
-        public async Task<ProductColumnValue?> AddFloatAsync(int columnId, int productId, double value)
+        public ProductColumnValue? AddFloatColumn(int columnId, int productId, double value)
         {
-            return await unitOfWork.ProductColumnValueRepository.AddAsync(
+            return  unitOfWork.ProductColumnValueRepository.Add(
                 new FloatProductColumnValue { ColumnId = columnId, ProductId = productId, FloatValue = value });
         }
     }

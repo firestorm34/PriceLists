@@ -20,7 +20,10 @@ public class PriceListHub : Hub
         this.productServices = productServices;
     }
 
-
+    /// <summary>
+    /// This hub method is used to immediately replace PriceList page with next/previous one 
+    /// without page reloading
+    /// </summary>
     public async Task GetPriceListPage(int pageSize = 10, int pageNumber=1)
     {
         PageResult<PriceList> priceLists = priceListServices.GetBatch(pageSize, pageNumber);
@@ -37,8 +40,16 @@ public class PriceListHub : Hub
     {
         await productServices.Delete(productId);
         await unit.SaveAsync();
-        PageResult<Product> products = productServices.GetBatch(pageSize, pageNumber);
-        await Clients.Client(Context.ConnectionId).SendAsync("ReceiveProductPage", products);
+        //PageResult<Product> products = productServices.GetBatch(pageSize, pageNumber);
+        //await Clients.Client(Context.ConnectionId).SendAsync("ReceiveProductPage", products);
+    }
+
+    public async Task DeletePriceList(int priceListId, int pageSize = 10, int pageNumber = 1)
+    {
+        await priceListServices.Delete(priceListId);
+        await unit.SaveAsync();
+        PageResult<PriceList> priceLists = priceListServices.GetBatch(pageSize, pageNumber);
+        await Clients.Client(Context.ConnectionId).SendAsync("ReceivePriceListPage", priceLists);
     }
 
 }

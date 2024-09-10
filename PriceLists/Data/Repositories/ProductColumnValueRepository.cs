@@ -11,11 +11,15 @@ namespace PriceLists.Data.Repositories
             this.context = context;
         }
 
-        public async Task<ProductColumnValue>? GetForProductColumn (int productId, Column column)
+        public ProductColumnValue? GetForProductColumn (int productId, Column column)
         {
-           return await context.ProductColumnValues.FirstAsync((value) => 
+            var res = context.ProductColumnValues;
+                
+                var res2= res.FirstOrDefault((value) => 
                 (value.ColumnId == column.Id) && (value.ProductId == productId) 
             ) ;
+
+            return res2;
 
             
         }

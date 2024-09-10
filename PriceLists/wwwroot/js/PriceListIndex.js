@@ -73,6 +73,12 @@ function checkBtnAppearance() {
     }
 }
 
+
+function onDeleteBtnClick(priceListId) {
+    connection.invoke("DeletePriceList", priceListId, pageSize, currentPageNumber);
+    removeRowById(productId);
+}
+
 connection.on("ReceivePriceListPage", (priceListsPage) => {
    
     currentPageNumber = priceListsPage.pageNumber;
@@ -95,10 +101,10 @@ connection.on("ReceivePriceListPage", (priceListsPage) => {
             row.appendChild(nameCell);
 
 
-            let deleteBtn = document.createElement("a");
-            deleteBtn.classList = "btn btn-danger";
-            deleteBtn.href = "https://localhost:7027/delete/" + priceList.id;
-            deleteBtn.textContent = "Delete";
+            //let deleteBtn = document.createElement("a");
+            //deleteBtn.classList = "btn btn-danger";
+            //deleteBtn.addEventListener()
+            //deleteBtn.textContent = "Delete";
 
 
             let viewBtn = document.createElement("a");
@@ -110,7 +116,9 @@ connection.on("ReceivePriceListPage", (priceListsPage) => {
 
             let actionCell = document.createElement("td");
             actionCell.style["width"] = "150px";
-            
+
+            let deleteBtn = document.createElement("span");
+            deleteBtn.innerHTML = "<a  class='btn btn-danger'  onclick=onDeleteBtnClick(" + priceList.id + ")> Delete</a>";
             actionCell.appendChild(viewBtn);
             actionCell.appendChild(deleteBtn);
             row.appendChild(actionCell);

@@ -10,10 +10,10 @@ namespace PriceLists.Data.Repositories
             this.context = context;
         }
 
-        public  IQueryable<Column> GetForPriceList (int priceListId)
+        public  List<Column> GetForPriceList (int priceListId)
         {
             return  context.Columns.
-                Where(column => column.PriceListId == priceListId);
+                Where(column => column.PriceListId == priceListId).ToList();
 
         }
 

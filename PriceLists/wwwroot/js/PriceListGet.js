@@ -7,7 +7,7 @@ const connection = new signalR.HubConnectionBuilder()
 
 var currentPageNumber = 1;
 var totalNumberOfPages = 0;
-var pageSize = 4;
+var pageSize = 10;
 
 async function start() {
     try {
@@ -34,6 +34,16 @@ function onNextPageClick() {
     connection.invoke("GetProductPage", pageSize, currentPageNumber + 1);
 }
 
+function onDeleteBtnClick(productId) {
+    connection.invoke("DeleteProduct", productId, pageSize, currentPageNumber);
+    removeRowById(productId);
+}
+
+function removeRowById(id) {
+    let tbody = document.getElementById("table-body");
+    let rowToDelete = document.getElementById(id);
+    tbody.removeChild(rowToDelete);
+}
 
 function checkBtnAppearance() {
     if (currentPageNumber < 1) {
@@ -73,9 +83,9 @@ connection.on("ReceiveProductPage", (ProductsPage) => {
         products.forEach((product) => {
             let row = document.createElement("tr");
 
-            let idCell = document.createElement("td");
-            idCell.textContent = product.id;
-            row.appendChild(idCell);
+            //let idCell = document.createElement("td");
+            //idCell.textContent = product.id;
+            //row.appendChild(idCell);
 
             product.values.forEach(value => {
                 let nameCell = document.createElement("td");
@@ -85,9 +95,19 @@ connection.on("ReceiveProductPage", (ProductsPage) => {
                 else { 
                     nameCell.textContent = value;
                 }
+
                 row.appendChild(nameCell);
             })
+            let deletionCell = document.createElement("td");
+            let deleteBtn = document.createElement("a");
 
+            //deleteBtn.textContent = "Delete";
+            //deleteBtn.classList.add("btn", "btn-danger");
+            //deletionCell.appendChild(deleteBtn);
+            deletionCell.innerHTML ="<a class='btn btn-danger' onclick=onDeleteBtnClick(" + product.id +")> Delete</a>";
+           
+            row.appendChild(deletionCell);
+            row.id = product.id;
             tableBody.appendChild(row);
         })
     }

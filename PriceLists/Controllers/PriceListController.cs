@@ -70,13 +70,13 @@ namespace PriceLists.Controllers
                 {
 
                     Column column = new Column { Name = name, Type = type, PriceListId = createdPriceList.Id };
-                    await columnServices.AddAsync(column);
-                    await unit.SaveAsync();
+                    columnServices.Add(column);
                 }
+                await unit.SaveAsync();
+
             }
             return View("Index");
         }
-
 
 
         

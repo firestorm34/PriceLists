@@ -7,7 +7,7 @@ namespace PriceLists.Models.ViewModels
         public int Id { get; set; }
         public string Name { get; set; }
 
-        public IQueryable<Column> Columns { get; set; }
+        public List<Column> Columns { get; set; }
 
     }
 

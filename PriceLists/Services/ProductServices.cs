@@ -51,16 +51,23 @@ namespace PriceLists.Services
             if (product != null)
             {
 
-
-                //List<Column> productColumns = unitOfWork.ColumnRepository.GetForPriceList(product.PriceListId).ToList();
-                Column productColumn = await unitOfWork.ColumnRepository.GetAsync(1);
                 List<dynamic> productColumnValues = new();
+                List<Column> productColumns = unitOfWork.ColumnRepository.GetForPriceList(product.PriceListId).ToList();
+                foreach (Column column in productColumns)
+                {
 
-                
-                    var value = await unitOfWork.ProductColumnValueRepository.GetForProductColumn(1, productColumn);
+                    var columnValue =  unitOfWork.ProductColumnValueRepository.GetForProductColumn(product.Id, column);
+                    if (columnValue != null)
+                    {
+
+                        productColumnValues.Add(columnValue.GetValue());
+                    }
+                    else
+                    {
+                        productColumnValues.Add(null);
+                    }
                     
-                    productColumnValues.Add(value.GetValue());
-                
+                }
                 ProductViewModel viewModel = new()
                 {
                     Id = product.Id,

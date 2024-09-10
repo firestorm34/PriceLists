@@ -7,6 +7,8 @@ using PriceLists.Models.ViewModels;
 using PriceLists.Services;
 using PriceLists.Extentions;
 using Newtonsoft.Json.Linq;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 
 namespace PriceLists.Controllers
 {
@@ -42,23 +44,37 @@ namespace PriceLists.Controllers
             {
                 return View(productModel);
             }
-            var c = typeof(int);
+            productModel.Columns = unit.ColumnRepository.GetForPriceList(productModel.PriceListId);
+
+            if (productModel.Values.Where(value=>value!=null).Count() < 1)
+            {
+                ModelState.AddModelError("", "You must fill at least one field");
+
+                return View(productModel);
+
+            }
             Product product = new Product { PriceListId = productModel.PriceListId };
-            Product productEntity = await unit.ProductRepository.AddAsync(product);
+            Product productEntity = unit.ProductRepository.Add(product);
             await unit.SaveAsync();
+           
             foreach (var (column, columnValue) in productModel.Columns.Zip(productModel.Values))
             {
-              
+                Func<string, ConversionResult> conversionMethod = ColumnTypeConvert.ColumnTypeConversions[column.Type];
+                ConversionResult result = conversionMethod(columnValue);
                 if (result.HasSucceeded)
                 {
-                    switch (column.Type)
-                    {
-                        case ColumnDataType.Number: await columnServices.AddNumberColumnAsync(result.va),
-                    }
+                    columnServices.TryAddColumnValue(column, result.Value, product.Id);
+                   
+
+                }
+                else
+                {
+                    ModelState.AddModelError("", result.FailReason.ToString() + " error has been thrown");
+                    return View(productModel);
                 }
 
             }
-            return RedirectToAction("Index", "PriceList");
+            return RedirectToAction(nameof(PriceListController.Get), "PriceList", new { priceListId = productModel.PriceListId });
         }
 
 

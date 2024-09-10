@@ -10,12 +10,12 @@ namespace PriceLists.Data.Repositories
         {
             this.context = context;
         }
-        public virtual async Task<TEntity?> AddAsync(TEntity entity)
+        public virtual TEntity? Add(TEntity entity)
         {
             if(entity == null) {
                 return null;
             }
-            await context.Set<TEntity>().AddAsync(entity);
+            context.Set<TEntity>().Add(entity);
             return entity;
 
         }

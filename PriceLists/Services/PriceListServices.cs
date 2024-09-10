@@ -28,7 +28,7 @@ namespace PriceLists.Services
         {
 
            
-                 PriceList createPricelist = await unitOfWork.PriceListRepository.AddAsync(priceList);
+                 PriceList createPricelist =  unitOfWork.PriceListRepository.Add(priceList);
                  await unitOfWork.SaveAsync();
                   return createPricelist;
                 
@@ -40,7 +40,7 @@ namespace PriceLists.Services
 
             PriceList priceList = await unitOfWork.PriceListRepository.GetAsync(priceListId);
             if(priceList != null) { 
-                IQueryable<Column> priceListColumns =  unitOfWork.ColumnRepository.GetForPriceList(priceListId);
+                List<Column> priceListColumns =  unitOfWork.ColumnRepository.GetForPriceList(priceListId);
                 PriceListViewModel viewModel = new() { Id = priceList.Id, Name = priceList.Name, Columns = priceListColumns };
                 return viewModel;
 
@@ -49,6 +49,11 @@ namespace PriceLists.Services
             {
                 return null;
             }
+        }
+
+        public async Task Delete(int priceListId)
+        {
+            await unitOfWork.PriceListRepository.DeleteAsync(priceListId);
         }
     }
 }
